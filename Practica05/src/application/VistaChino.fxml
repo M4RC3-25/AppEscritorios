@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:controller="application.Controlador" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="613.0" prefWidth="490.0" style="-fx-background-color: #d6d3b1;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="110.0" layoutY="20.0" text="Restaurant &quot;El Chino&quot;" textFill="#d32f2f">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+
+      <Label layoutX="180.0" layoutY="60.0" text="Menú del dia">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+
+      <Label layoutX="40.0" layoutY="100.0" text="Selecciona una bebida:" />
+
+      <VBox layoutX="40.0" layoutY="130.0" spacing="8.0">
+         <children>
+            <fx:define>
+               <ToggleGroup fx:id="bebidas"/>
+            </fx:define>
+            <RadioButton toggleGroup="$bebidas" text="Refresco" />
+            <RadioButton toggleGroup="$bebidas" text="Agua de sabor" />
+            <RadioButton toggleGroup="$bebidas" text="Café" />
+            <RadioButton toggleGroup="$bebidas" text="Cerveza" />
+         </children>
+      </VBox>
+
+      <Label layoutX="40.0" layoutY="250.0" text="Selecciona un plato fuerte:" />
+      <ComboBox fx:id="cmbPlatos" layoutX="40.0" layoutY="280.0" prefWidth="200.0" />
+
+      <Label layoutX="40.0" layoutY="330.0" text="Selecciona un postre:" />
+      <ChoiceBox fx:id="cmbPostres" layoutX="40.0" layoutY="360.0" prefWidth="200.0" />
+
+      <Label layoutX="40.0" layoutY="410.0" text="Complementos:" />
+
+      <CheckBox fx:id="cmbComp1" layoutX="40.0" layoutY="440.0" text="Tortillas" />
+      <CheckBox fx:id="cmbComp2" layoutX="140.0" layoutY="440.0" text="Botana" />
+
+      <Button onAction="#clickOrdenar" layoutX="40.0" layoutY="480.0" text="Ordenar" />
+
+      <TextArea fx:id="orden" layoutX="40.0" layoutY="520.0" prefHeight="70.0" prefWidth="400.0" wrapText="true" disable="true"/>
+   </children>
+</AnchorPane>

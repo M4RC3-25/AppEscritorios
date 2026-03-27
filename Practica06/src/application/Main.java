@@ -10,9 +10,9 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("VistaChino.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("VistaFormulario.fxml"));
 			Scene scene = new Scene(root);
-			primaryStage.setTitle("El chino - Practica 5");
+			primaryStage.setTitle("Formulario - Practica 5");
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch(Exception e) {
